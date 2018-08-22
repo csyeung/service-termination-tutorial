@@ -52,7 +52,7 @@ It is that simple, of course you have to setup the Firebase authenticaton before
             if serviceEndStatus == "no" {
                 return endState(.notyet)
             } else if serviceEndStatus == "countdown" {
-                guard let isoDate = config.configValue(forKey: "service_end_date").stringValue else {
+                guard let isoDate = config.configValue(forKey: "service_countdown").stringValue else {
                     return endState(.countdown)
                 }
                 
